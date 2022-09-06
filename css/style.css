@@ -1,0 +1,563 @@
+@font-face {
+  font-family: 'Exo 2';
+  src: url(../css/ttf/Exo2-Regular.ttf);
+}
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Exo 2", sans-serif;
+  background-color: rgb(240, 240, 240);
+
+}
+
+/*-------------------HEADER---------------------------*/
+
+.header{
+  background: black;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+
+.nav__logo{
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 60px;
+  margin: 20px 0 20px 30px;
+  padding-right: 20px;
+
+}
+
+.nav__logo a, .nav__item a{
+  text-decoration: none;
+  color: white;
+}
+
+.nav, .nav__menu{
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav__menu{
+  margin-right: 30px;
+  list-style: none;
+}
+
+.nav__item{
+  font-size: 20px;
+  line-height: 60px;
+  margin: 20px 20px 20px 0;
+  text-transform: uppercase;
+
+}
+
+.nav__item a{
+  padding: 8px 12px;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.nav__item a:hover{
+  color: #0571ec;
+  
+}
+
+.nav-toggle {
+  color: white;
+  background: none;
+  border: none;
+  font-size: 30px;
+  padding: 0 20px;
+  line-height: 60px;
+  cursor: pointer;
+  margin-left: 200px;
+  margin-top: 10px;
+  display: none;
+}
+
+/*-------------------MAIN---------------------------*/
+
+.img-pc{
+  width: 100%;
+  height: auto;
+  position: relative;
+  top: 80px;
+  display: flex;
+  margin: 0 auto;
+  margin-bottom: 150px;
+}
+
+.card-container{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px;
+  max-width: 80%;
+  margin: 40px auto;
+}
+
+.card{
+  max-width: 300px;
+  height: 180px;
+  border: 1px solid rgb(200, 200, 200);
+  border-radius: 5px;
+  background-color: white;
+ 
+}
+
+.card__info{
+  font-size: 20px;
+  font-weight: bold;
+  margin: 30px 0;
+  
+}
+
+.card__info p{
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+
+.card__info a{
+  text-decoration: none;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.card__info img{
+  height: 50%;
+  width: 30%;
+}
+
+.section{
+  margin-top: 150px;
+}
+
+.producto{
+  margin-top: 30px;
+  max-width: 300px;
+  display: flex;
+  flex-flow: column;
+  border-radius: 10px;
+  box-shadow: 0 0 0.2em rgba(0, 0 , 0, 0.2);
+  background-color: rgb(255, 255, 255);
+  cursor:default;
+  transition-property: box-shadow;
+  transition-duration: 0.3s;
+  text-transform: uppercase;
+  
+}
+
+.producto:hover{
+  box-shadow: 0 0 0.5em #0571ec;;
+
+}
+
+.producto > img{
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+}
+
+.producto__informacion{
+  border-top: 1px solid rgb(230, 230, 230);
+  padding: 1em;
+  display: flex;
+  flex-flow:column;
+}
+
+.producto__informacion * + *{
+  margin-bottom: 1em;
+}
+
+
+.producto__precio{
+  font-size: 1.5em;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.producto__descripcion{
+  font-size: 12px;
+  font-weight: 600;
+
+}
+
+.producto__button{
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  margin: 10px auto;
+  cursor: pointer;
+  border: 2.5px black solid;
+  border-radius: 2px;
+  color: white;
+  background-color: black; 
+}
+
+.producto__button span{
+  font-weight: bold;
+}
+
+.producto__container{
+  border-top: 1px solid rgb(200, 200, 200);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.section__title{
+  max-width: 80%;
+  margin: 20px auto;
+
+}
+
+.section__title span{
+  font-size: 25px;
+}
+
+.imageGaming {
+  display: flex;
+  margin: 100px auto;
+  overflow: hidden;
+  position: relative;
+
+}
+
+.imageGaming img{
+  display: flex;
+  width: 80%;
+  max-height: 300px;
+  margin: 0 auto;
+  object-fit: cover;
+  border-radius: 15px;
+
+}
+
+.imageGaming p{
+  padding-right: 70px;
+  font-size: 3rem;
+  position: absolute;
+  top:35%;
+  left:20%;
+  color: white;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+}
+
+.cardPC__container{
+  border-top: 1px solid rgb(200, 200, 200);
+  display: grid;
+  max-width: 80%;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  grid-template-columns: repeat(3, 1fr);
+  
+ 
+}
+
+.cardGaming {
+  background: url('../assets/images/gaming.jpg');
+}
+
+.cardRig {
+
+  background: url('../assets/images/rig.jpg');
+
+}
+
+.cardDesign{
+  background: url('../assets/images/design.jpg');
+}
+
+.cardDesign,
+.cardGaming,
+.cardRig{
+  margin: 20px;
+  max-width: 100%;
+  min-height: 300px;
+  border-radius: 5px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 3px 5px 5px rgba(3, 32, 51, .8);
+  overflow: hidden;
+}
+
+
+.content {
+  min-width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, .4);
+  transition: .5s;
+
+}
+
+.content h2, a {
+  color: rgba(255, 255, 255, .8);
+  margin: 10px 0;
+}
+
+@media(hover:hover){
+
+  .content{
+    opacity: 0;
+  }
+  .content:hover {
+    opacity: 1;
+  }
+  
+}
+
+
+/*-------------------FOOTER---------------------------*/
+
+.footer{
+  margin-top: 30px;
+  background-color: black;
+  width: 100%;
+  height: 180px;
+}
+
+.redes-container{
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+  margin: 0px auto;
+  padding: 20px 0;
+  
+}
+
+.footer__copy{
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+
+/*-----------------CONTACTO----------------*/
+
+.main{
+  min-height: 82vh;
+}
+
+.contact-h1{
+  padding-top: 120px;
+  text-align: center;
+}
+
+.contact-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+.form__header{
+  font-size: 25px;
+  text-align: center;
+  margin: 10px 0px;
+}
+
+.form__textarea{
+  resize: none;
+  height: 200px;
+}
+
+.form{
+  width: 90%;
+  max-width: 650px;
+  padding: 5px 35px;
+  margin-top: 30px;
+  padding-bottom: 30px;
+  border-radius: 3px;
+}
+
+.form__label {
+  font-size: 20px;
+}
+
+.form__input, .form__textarea{
+  margin-top: 5px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #1A80D5;
+  border-radius: 2px;
+
+}
+
+.form__input,  .form__textarea{
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #fff;
+}
+
+.form__submit{
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  display: flex;
+  height: 40px;
+  width: 200px;
+  justify-content: center;
+  margin: 0 auto;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/*-------------------MEDIAQUERIES---------------------------*/
+
+@media (max-width:1500px){
+  .producto__container{
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .imageGaming p{
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 1200px){
+
+
+  .card-container{
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 70%;
+    gap: 50px;
+    margin: 40px auto;
+  }
+
+  .imageGaming p{
+    font-size: 2.0rem;
+  }
+
+  .cardPC__container{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 1024px){
+  .nav__logo{
+    font-size: 22px;
+  }
+
+  .content{
+    opacity: 1;
+  }
+
+  .nav__item{
+    font-size: 15px;
+  }
+
+  .nav__item a{
+    padding: 0;
+  }
+
+  .producto__container{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .imageGaming p{
+    font-size: 1.8rem;
+  }
+
+}
+
+@media (max-width: 900px){
+ 
+  .imageGaming p{
+    font-size: 1.5rem;
+  }
+
+  .cardPC__container{
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media (max-width: 600px){
+
+    .producto__container{
+      grid-template-columns: 1fr;
+    }
+
+    .card{
+      max-height: 120px;
+      min-width: 100px;
+    }
+
+    .card__info p{
+      font-size: 15px;
+    }
+
+    .nav__logo{
+      font-size: 22px;
+      margin-left: 15px;
+    }
+  
+    .contact-h1{
+      font-size: 18px;
+      padding-bottom: 15px;
+  }
+    .nav__menu {
+      margin-top: 40px;
+      flex-direction: column;
+      justify-content: start;
+      align-items: center;
+      background-color: #2c3e50;
+      position: fixed;
+      top: 60px;
+      width: 100%;
+      padding: 30px 0;
+      z-index: 100;
+      height: calc(100% - 80px);
+      overflow-y: auto;
+  
+      left: 100%;
+      transition: left 0.3s;
+    }
+
+
+    .nav__item{
+      padding:0;
+      margin: 10px 0;
+      font-size: 20px;
+    }
+  
+  
+    .nav-toggle {
+      display: block;
+      margin-left: 90px;
+    }
+  
+    .nav__menu--visible {
+      left: 0;
+    }
+  
+    .nav-toggle:focus:not(:focus-visible) {
+      outline: none;
+    }
+
+}
+
