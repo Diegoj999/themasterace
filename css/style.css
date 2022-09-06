@@ -65,6 +65,7 @@ body {
 }
 
 .nav__item a:hover{
+  font-size: 22px;
   color: #0571ec;
   
 }
@@ -413,7 +414,8 @@ body {
 
 .form__submit{
   background-color: rgba(0, 0, 0, 0.7);
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: none;
+  border-bottom: 2px solid #1A80D5;
   display: flex;
   height: 40px;
   width: 200px;
@@ -422,7 +424,33 @@ body {
   color: white;
   font-size: 20px;
   cursor: pointer;
+  animation: wiggle 2s linear infinite;
 }
+
+@keyframes wiggle {
+  0%, 7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-15deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  30% {
+    transform: rotateZ(6deg);
+  }
+  35% {
+    transform: rotateZ(-4deg);
+  }
+  40%, 100% {
+    transform: rotateZ(0);
+  }
+}
+
 
 /*-------------------MEDIAQUERIES---------------------------*/
 
